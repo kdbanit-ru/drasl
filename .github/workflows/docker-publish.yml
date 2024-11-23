@@ -1,7 +1,6 @@
 name: Publish OCI image
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - "v*"
