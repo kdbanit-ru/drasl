@@ -114,7 +114,7 @@ func DefaultConfig() Config {
 		BodyLimit:                defaultBodyLimitConfig,
 		DataDirectory:            DEFAULT_DATA_DIRECTORY,
 		DefaultAdmins:            []string{},
-		DefaultPreferredLanguage: "ru",
+		DefaultPreferredLanguage: "en",
 		Domain:                   "auth.ardien.ru",
 		EnableBackgroundEffect:   false,
 		EnableFooter:             false,
