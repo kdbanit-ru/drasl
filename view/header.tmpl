@@ -11,7 +11,6 @@
       </h1>
     </div>
     <div style="text-align: right">
-      <a href="{{ .App.FrontEndURL }}/web/registration">Register</a>
       {{ if .User }}
         {{ if .User.IsAdmin }}
           <a href="{{ .App.FrontEndURL }}/web/admin">Admin</a>
@@ -26,6 +25,8 @@
         >
           <input type="submit" value="Log Out" />
         </form>
+      {{ else }}
+        <a href="{{ .App.FrontEndURL }}/web/registration">Register</a>
       {{ end }}
     </div>
   </nav>
