@@ -63,6 +63,7 @@ type Config struct {
 	AllowChangingPlayerName    bool
 	AllowMultipleAccessTokens  bool
 	AllowSkins                 bool
+	AllowTextureFromURL        bool
 	ApplicationOwner           string
 	ApplicationName            string
 	BaseURL                    string
@@ -105,21 +106,22 @@ var defaultBodyLimitConfig = bodyLimitConfig{
 
 func DefaultConfig() Config {
 	return Config{
-		AllowCapes:               false,
+		AllowCapes:               true,
 		AllowChangingPlayerName:  true,
 		AllowSkins:               true,
-		ApplicationName:          "Ardien",
-		ApplicationOwner:         "Ardien",
-		BaseURL:                  "https://auth.ardien.ru",
+		AllowTextureFromURL:      false,
+		ApplicationName:          "Drasl",
+		ApplicationOwner:         "Anonymous",
+		BaseURL:                  "",
 		BodyLimit:                defaultBodyLimitConfig,
 		DataDirectory:            DEFAULT_DATA_DIRECTORY,
 		DefaultAdmins:            []string{},
 		DefaultPreferredLanguage: "en",
-		Domain:                   "auth.ardien.ru",
-		EnableBackgroundEffect:   false,
-		EnableFooter:             false,
+		Domain:                   "",
+		EnableBackgroundEffect:   true,
+		EnableFooter:             true,
 		ForwardSkins:             true,
-		InstanceName:             "Ardien",
+		InstanceName:             "Drasl",
 		ListenAddress:            "0.0.0.0:25585",
 		LogRequests:              true,
 		MinPasswordLength:        8,
