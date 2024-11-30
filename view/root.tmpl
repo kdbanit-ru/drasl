@@ -4,17 +4,23 @@
 
 {{ define "content" }}
   {{ template "header" . }}
-  <h3>Log in</h3>
-  <form action="{{ .App.FrontEndURL }}/web/login" method="post">
-    <input type="text" name="username" placeholder="Username" required />
-    <input
-      class="long"
-      type="password"
-      name="password"
-      placeholder="Password"
-      required
-    />
-    <input type="submit" value="Log in" />
-  </form>
+    {{ if not .User }}
+      <h3>Log in</h3>
+      <form action="{{ .App.FrontEndURL }}/web/login" method="post">
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          class="long"
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" value="Log in" />
+      </form>
+    {{ else }}
+      <script>
+        window.location.replace("/web/profile");
+      </script>
+    {{ end }}
   {{ template "footer" . }}
 {{ end }}
