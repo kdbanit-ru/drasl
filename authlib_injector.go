@@ -65,7 +65,7 @@ func AuthlibInjectorRoot(app *App) func(c echo.Context) error {
 
 	responseBlob := Unwrap(json.Marshal(authlibInjectorResponse{
 		Meta: authlibInjectorMeta{
-			ImplementationName:    "Drasl",
+			ImplementationName:    "Ardien",
 			ImplementationVersion: Constants.Version,
 			Links: authlibInjectorLinks{
 				Homepage: app.FrontEndURL,
